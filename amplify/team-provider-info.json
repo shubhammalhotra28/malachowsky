@@ -1,0 +1,15 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-malachowsky-dev-144258-authRole",
+      "UnauthRoleArn": "arn:aws:iam::088657720649:role/amplify-malachowsky-dev-144258-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::088657720649:role/amplify-malachowsky-dev-144258-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-malachowsky-dev-144258-deployment",
+      "UnauthRoleName": "amplify-malachowsky-dev-144258-unauthRole",
+      "StackName": "amplify-malachowsky-dev-144258",
+      "StackId": "arn:aws:cloudformation:us-east-1:088657720649:stack/amplify-malachowsky-dev-144258/ff8e1190-82cd-11ec-aa1b-12d36a6aa1ef",
+      "AmplifyAppId": "ddk28nlxp1eue"
+    }
+  }
+}
