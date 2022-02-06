@@ -1,0 +1,62 @@
+.main {
+  position: relative;
+  width: 100%;
+  background-color: rgb(122, 193, 236);
+}
+
+.main img {
+  width: 75%;
+  height: 95%;
+}
+
+.topline{
+  position: absolute;
+  font-size: 64px;
+  margin: 0px;
+}
+
+.botline{
+  position: absolute;
+  padding: 22px;
+  padding-top: 20px;
+  font-size: 64px;
+}
+
+.main Button {
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  background-color: rgb(200, 227, 241);
+  color: rgb(23, 24, 36);
+  font-size: 16px;
+  padding: 24px 48px;
+  border: none;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+.leftcol Button{
+  left: 25%;
+}
+
+.rightcol Button{
+  left: 75%;
+}
+
+.row1 Button{
+  top: 15%;
+}
+
+.row2 Button{
+  top: 45%;
+}
+
+.row3 Button{
+  top: 75%;
+}
+
+.main .btn:hover {
+  color: rgb(200, 227, 241);
+  background-color: rgb(23, 24, 36);
+}
