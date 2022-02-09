@@ -1,6 +1,7 @@
-import background from './chow.png';
+import background from './tophat_chow.png';
 import React from 'react';
 import './Homepage.css';
+import ActivityFeed from './ActivityFeed.js';
 import {Button} from 'reactstrap';
 
 
@@ -13,15 +14,16 @@ class Homepage extends React.Component {
         <center>
           <img src={background} alt="tophat_chow" />
         </center>
+        <div class="navbuttons">
         <div class="leftcol">
           <div class="row1">
-            <Button class= "row1" onClick={event =>  window.location.href='/chowmap'}>Chow Map</Button>
+            <Button onClick={event =>  window.location.href='/chowmap'}>Chow Map</Button>
           </div>
           <div class="row2">
-            <Button class= "row2" onClick={event =>  window.location.href='/chowlocation'}>Chow Location</Button>
+            <Button onClick={event =>  window.location.href='/chowlocation'}>Chow Location</Button>
           </div>
           <div class="row3">
-            <Button class= "row3" onClick={event =>  window.location.href='/chowphoto'}>Chow Photo</Button>
+            <Button onClick={event =>  window.location.href='/chowphoto'}>Chow Photo</Button>
           </div>
         </div>
         <div class="rightcol">
@@ -35,6 +37,11 @@ class Homepage extends React.Component {
             <Button onClick={event =>  window.location.href='/chowdash'}>Chow Dash</Button>
           </div>
         </div>
+        </div>
+        <div class="activityfeed">
+          <ActivityFeed name="Chow Reports"></ActivityFeed>
+        </div>
+
 			</div>
 			);
 		}
