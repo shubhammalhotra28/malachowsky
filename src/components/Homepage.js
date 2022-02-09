@@ -1,4 +1,4 @@
-import background from './tophat_chow.png';
+import background from '../resources/tophat_chow.png';
 import React from 'react';
 import './Homepage.css';
 import ActivityFeed from './ActivityFeed.js';
