@@ -39,7 +39,7 @@ class Homepage extends React.Component {
         </div>
         </div>
         <div class="activityfeed">
-          <ActivityFeed name="Chow Reports"></ActivityFeed>
+          <ActivityFeed name="Chow Reports" maxElements="20"></ActivityFeed>
         </div>
 
 			</div>

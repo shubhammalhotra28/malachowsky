@@ -9,14 +9,31 @@ class ActivityFeed extends React.Component {
         super(props);
         this.cards = [];
         this.name = props.name;
+        this.maxElements = props.maxElements;
+
+        this.addCard("Title", "Example Card 1", "examplelink")
+        this.addCard("Title", "Example Card 2", "examplelink")
+        this.addCard("Title", "Example Card 3", "examplelink")
+        this.addCard("Title", "Example Card 4", "examplelink")
     }
+
+    addCard = (title,text,link) => 
+    { 
+        this.cards.unshift([title,text,link]);
+        if(this.cards.length > this.maxElements){
+            this.cards.pop();
+        }
+    }
+
 
     render() {
 			return (
             <div class="activityfeed">
             <h2>{this.name}</h2>
                 <Table>
-                    <EventCard title="Title" text="example card" link="/examplelink">Example Card</EventCard>
+                {this.cards.map((card) => (
+                        <EventCard title={card[0]} text={card[1]} link={card[2]}>Example Card</EventCard>
+                    ))}
                 </Table>
 			</div>
 			);
