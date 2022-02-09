@@ -1,4 +1,4 @@
-import background from './chow.png';
+import background from '../resources/chow.png';
 import React from 'react';
 import './Homepage.css';
 import {Button} from 'reactstrap';
