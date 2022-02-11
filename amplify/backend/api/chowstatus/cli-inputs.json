@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "paths": {
+    "/chowstatus": {
+      "name": "/chowstatus",
+      "lambdaFunction": "chowstatus",
+      "permissions": {
+        "setting": "open"
+      }
+    }
+  }
+}

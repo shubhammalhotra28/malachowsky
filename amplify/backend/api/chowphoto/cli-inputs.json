@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "paths": {
+    "/chowphoto": {
+      "name": "/chowphoto",
+      "lambdaFunction": "chowphoto",
+      "permissions": {
+        "setting": "open"
+      }
+    }
+  }
+}
