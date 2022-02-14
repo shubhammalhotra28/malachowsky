@@ -23,7 +23,7 @@
         },
         "chowstatus": {
           "deploymentBucketName": "amplify-malachowsky-dev-144258-deployment",
-          "s3Key": "amplify-builds/chowstatus-542b4c724b4d32385977-build.zip"
+          "s3Key": "amplify-builds/chowstatus-7a414461717375375075-build.zip"
         },
         "chowmap": {
           "deploymentBucketName": "amplify-malachowsky-dev-144258-deployment",
