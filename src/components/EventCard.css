@@ -1,0 +1,31 @@
+.activitycard .card{
+    position: sticky;
+    border-radius: 5px;
+    width: flex;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    margin-left: 10%;
+    margin-right: 10%;
+    border-color: rgb(26, 31, 88);
+    background-color: rgb(200, 227, 241);
+ }
+
+ .activitycard .title{
+    color: rgb(26, 31, 88);
+    font-size: 20px;
+    margin-top: 0%;
+    margin-bottom: 0%;
+ }
+
+ .activitycard .text{
+    color: rgb(26, 31, 88);
+    font-size: 16px;
+    margin-top: 0%;
+    margin-bottom: 0%;
+
+ }
+
+ .activitycard .card:hover {
+    color: rgb(200, 227, 241);
+    background-color: rgb(26, 31, 88);
+  }
