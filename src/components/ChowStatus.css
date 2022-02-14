@@ -1,0 +1,40 @@
+.chowstatusmain {
+    background-color: white;
+    position: absolute;
+    padding:0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../resources/thug_life_chow.png');
+    background-size: cover;                     
+    background-repeat: no-repeat;
+    background-position: center center;
+    display: table;
+    margin: 0 auto;
+}
+.status{
+    position:relative;
+    margin:0 auto;
+    padding:0;
+    top:100;
+    clear:left;
+    height:auto;
+    z-index: 0;
+    text-align:center;
+}
+.header {
+    font-weight: bold;
+    color: black;
+    font-size: 48px;
+    top: 0;
+    text-align:center;
+    margin-left:0;
+    padding:10px;
+    width:100%;
+    height: 50px;
+}
+label {
+    color: black;
+    font-size: 32px;
+    margin-top: 2%;
+}
