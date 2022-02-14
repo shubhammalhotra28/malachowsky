@@ -1,0 +1,28 @@
+.report-location-main {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(122, 193, 236);
+  }
+
+.report {
+    margin-left: 30%;
+    margin-top: 10%;
+    height: 40%;
+    width: 40%;
+}
+
+  .report-location-main Button {
+    background-color: rgb(200, 227, 241);
+    color: rgb(26, 31, 88);
+    font-size: 16px;
+    padding: 24px 48px;
+    border: none;
+    cursor: pointer;
+    border-radius: 10%;
+  }
+
+  .report-location-main .btn:hover {
+    color: rgb(200, 227, 241);
+    background-color: rgb(26, 31, 88);
+  }
