@@ -1,0 +1,23 @@
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height:100vh;  
+}
+.main {
+    color: white
+}
+h1 {
+    font-weight: bold;
+    color: black;
+    font-size: 48px;
+    position: absolute;
+    top: 0;
+    text-align: center;
+    width: 100%;
+}
+label {
+    color: black;
+    font-size: 32px;
+    margin-top: 2%;
+}
