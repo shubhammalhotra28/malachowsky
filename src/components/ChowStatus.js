@@ -28,15 +28,7 @@ class ChowStatus extends React.Component {
 
   render() {
     return (
-      <div class='main'>
-        <div class="menu">
-            <Button onClick={event =>  window.location.href='/chowmap'}>Chow Map</Button>
-            <Button onClick={event =>  window.location.href='/chowlocation'}>Chow Location</Button>
-            <Button onClick={event =>  window.location.href='/chowphoto'}>Chow Photo</Button>
-            <Button onClick={event =>  window.location.href='/chowstatus'}>Chow Status</Button>
-            <Button onClick={event =>  window.location.href='/chowclasses'}>Chow Classes</Button>
-            <Button onClick={event =>  window.location.href='/chowdash'}>Chow Dash</Button>
-        </div>
+      <div class='chowstatusmain'>
         <div class='status'>
         <h1 class='header'>Chow Status</h1>
           <form onSubmit={this.handleSubmit}>

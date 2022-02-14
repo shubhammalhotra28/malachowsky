@@ -1,4 +1,4 @@
-.main {
+.chowstatusmain {
     background-color: white;
     position: absolute;
     padding:0;
@@ -11,7 +11,6 @@
     background-position: center center;
     display: table;
     margin: 0 auto;
-    margin-right: 40px;
 }
 .status{
     position:relative;
@@ -23,7 +22,7 @@
     z-index: 0;
     text-align:center;
 }
-h1 {
+.header {
     font-weight: bold;
     color: black;
     font-size: 48px;
@@ -38,26 +37,4 @@ label {
     color: black;
     font-size: 32px;
     margin-top: 2%;
-}
-.menu{
-    width: 15%;
-}
-.menu button{
-    display: flex;
-    align-items: center;
-    border: none;
-    color: black;
-    text-align: center;
-    text-decoration: none;
-    font-size: 10px;
-    margin: 4px 2px;
-    padding-right: 0;
-    background-color: white;
-    border: 1px solid black;
-    padding: 10px 24px;
-    width: 90%;
-    display: block;
-}
-button{
-    margin: 0;
 }
