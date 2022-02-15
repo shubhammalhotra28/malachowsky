@@ -1,0 +1,12 @@
+.main {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(122, 193, 236);
+  }
+
+  .main img {
+    width: 75%;
+    height: 95%;
+  }
+  
