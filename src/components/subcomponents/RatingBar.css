@@ -1,0 +1,8 @@
+.ratingContainer {
+  display: flex;
+  justify-content: space-between;
+}
+
+label {
+  color: #f1d400;
+}
