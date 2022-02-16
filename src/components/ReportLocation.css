@@ -4,12 +4,31 @@
     height: 100%;
     background-color: rgb(122, 193, 236);
   }
+.report-location-photo {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  margin-top: 0%;
+  margin-left: auto;
+  margin-right: auto;
+  background-image: url('../resources/choo-chow.png');
+  background-repeat:   no-repeat;
+  background-position: center center;
+  background-size:     contain;    
+}
 
 .report {
     margin-left: 30%;
-    margin-top: 10%;
+    margin-top: 15%;
     height: 40%;
     width: 40%;
+}
+
+.report h1 {
+  /* 1 pixel black shadow to left, top, right and bottom */
+  text-shadow: -1px 0 rgb(26, 31, 88), 0 1px rgb(26, 31, 88), 1px 0 rgb(26, 31, 88), 0 -1px rgb(26, 31, 88);
+
+  color: rgb(200, 227, 241);
 }
 
   .report-location-main Button {

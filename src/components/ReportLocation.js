@@ -8,10 +8,12 @@ class ReportLocation extends React.Component {
     render() {
 			return (
 			<div class="report-location-main">
-                <div class="report">
-                    <h1>Spotted The Chow?</h1>
-                    <Button onClick={() => this.newReport()}>Report It!</Button>
-                </div>
+        <div class="report-location-photo">
+              <div class="report">
+                  <h1>Spotted The Chow?</h1>
+                  <Button onClick={() => this.newReport()}>Report It!</Button>
+              </div>
+          </div>
 			</div>
 			);
 		}
