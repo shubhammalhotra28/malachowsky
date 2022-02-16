@@ -1,30 +1,105 @@
 import React from 'react';
 import './ChowMap.css';
-import { Map, GoogleApiWrapper } from 'google-maps-react';
+import { Wrapper } from "@googlemaps/react-wrapper";
 
-const mapStyle = {
-    width: '100%',
-    height: '100%'
+const markers = [
+  { lat: -25.363, lng: 131.044 },
+  { lat: -15.363, lng: 122.044 }
+];
+
+const Map = ({ onClick, onIdle, children, style, ...options }) => {
+  const ref = React.useRef(null);
+  const [map, setMap] = React.useState();
+
+  React.useEffect(() => {
+    if (ref.current && !map) {
+      setMap(new window.google.maps.Map(ref.current, {}));
+    }
+  }, [ref, map]);
+
+  React.useEffect(() => {
+    if (map) {
+      map.setOptions(options);
+    }
+  }, [map, options]);
+
+  React.useEffect(() => {
+    if (map) {
+      ["click", "idle"].forEach((eventName) =>
+        window.google.maps.event.clearListeners(map, eventName)
+      );
+
+      if (onClick) {
+        map.addListener("click", onClick);
+      }
+
+      if (onIdle) {
+        map.addListener("idle", () => onIdle(map));
+      }
+    }
+  }, [map, onClick, onIdle]);
+
+  return (
+    <>
+      <div ref={ref} style={style} />
+      {React.Children.map(children, (child) => {
+        if (React.isValidElement(child)) {
+          return React.cloneElement(child, { map });
+        }
+      })}
+    </>
+  );
 };
 
-export class ChowMap extends React.Component {
-    render() {
-        return(
-        <Map 
-            google={this.props.google}
-            zoom={14}
-            style={mapStyle}
-            initialCenter={
-                {
-                lat:-1.2884,
-                lng:36.8233,
-            }
-        }
-        />
-        );
-    }
-}
+const Marker = (options) => {
+  const [marker, setMarker] = React.useState();
+  const contentRef = React.useRef(null);
 
-export default GoogleApiWrapper({
-    apiKey: 'AIzaSyDNDoGpMBytyRLvWZkkBO9nVLyx3Fm4I9M'
-})(ChowMap);
+  React.useEffect(() => {
+    if (!marker) {
+      setMarker(new window.google.maps.Marker());
+    }
+
+    return () => {
+      if (marker) {
+        marker.setMap(null);
+      }
+    };
+  }, [marker]);
+
+  React.useEffect(() => {
+    if (marker) {
+      const infowindow = new window.google.maps.InfoWindow({
+        content: `daver`
+      });
+      marker.setOptions(options);
+
+      marker.addListener("click", () => {
+        infowindow.open({
+          anchor: marker,
+          shouldFocus: false
+        });
+      });
+    }
+  }, [marker, options]);
+
+  return null;
+};
+
+export default function App() {
+  return (
+    <div style={{ display: "flex", height: "100vh", width: "100vw" }}>
+      <Wrapper apiKey={"AIzaSyDNDoGpMBytyRLvWZkkBO9nVLyx3Fm4I9M"}>
+        <Map
+          center={{ lat: -25.363, lng: 131.044 }}
+          zoom={3}
+          style={{ flexGrow: "1", height: "100%" }}
+        >
+          {markers.map((marker) => {
+            return <Marker position={marker} />;
+          })}
+        </Map>
+      </Wrapper>
+    </div>
+  );
+}
