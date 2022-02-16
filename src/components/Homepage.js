@@ -4,7 +4,6 @@ import './Homepage.css';
 import ActivityFeed from './ActivityFeed.js';
 import {Button} from 'reactstrap';
 
-
 class Homepage extends React.Component {
     render() {
 			return (
