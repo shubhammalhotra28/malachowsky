@@ -3,8 +3,8 @@ import './ChowMap.css';
 import { Wrapper } from "@googlemaps/react-wrapper";
 
 const markers = [
-  { lat: -25.363, lng: 131.044 },
-  { lat: -15.363, lng: 122.044 }
+  { lat: 43.08400302747437, lng: -77.6800637907594},
+  { lat: 43.08317908060919, lng: -77.680805067302 }
 ];
 
 const Map = ({ onClick, onIdle, children, style, ...options }) => {
@@ -70,7 +70,7 @@ const Marker = (options) => {
   React.useEffect(() => {
     if (marker) {
       const infowindow = new window.google.maps.InfoWindow({
-        content: `daver`
+        content: `CHOW`
       });
       marker.setOptions(options);
 
@@ -91,8 +91,8 @@ export default function App() {
     <div style={{ display: "flex", height: "100vh", width: "100vw" }}>
       <Wrapper apiKey={"AIzaSyDNDoGpMBytyRLvWZkkBO9nVLyx3Fm4I9M"}>
         <Map
-          center={{ lat: -25.363, lng: 131.044 }}
-          zoom={3}
+          center={{ lat: 43.08372751410854, lng: -77.68044042842241 }}
+          zoom={15}
           style={{ flexGrow: "1", height: "100%" }}
         >
           {markers.map((marker) => {
