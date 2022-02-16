@@ -1,15 +1,30 @@
 import React from 'react';
 import './ChowMap.css';
-import { Wrapper, Status } from "@googlemaps/react-wrapper";
+import { Map, GoogleApiWrapper } from 'google-maps-react';
 
-class ChowMap extends React.Component {
+const mapStyle = {
+    width: '100%',
+    height: '100%'
+};
+
+export class ChowMap extends React.Component {
     render() {
-        return (
-            <div class="main">
-                <center>
-                    <img src={background} alt="tophat_chow" />
-                </center>
-            </div>
-        )
+        return(
+        <Map 
+            google={this.props.google}
+            zoom={14}
+            style={mapStyle}
+            initialCenter={
+                {
+                lat:-1.2884,
+                lng:36.8233,
+            }
+        }
+        />
+        );
     }
 }
+
+export default GoogleApiWrapper({
+    apiKey: 'AIzaSyDNDoGpMBytyRLvWZkkBO9nVLyx3Fm4I9M'
+})(ChowMap);
