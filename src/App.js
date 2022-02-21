@@ -2,6 +2,7 @@ import './App.css';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Homepage from './components/Homepage';
 import ChowStatus from './components/ChowStatus';
+import ChowMap from './components/ChowMap';
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
             <Route path="/">
               <Route index element={<Homepage />} />
               <Route path="chowstatus" element={<ChowStatus />} />
+              <Route path="chowmap" element={<ChowMap />} />
             </Route>
           </Routes>
         </BrowserRouter>
