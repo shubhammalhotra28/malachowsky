@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "paths": {
+    "/chowmap": {
+      "name": "/chowmap",
+      "lambdaFunction": "chowmap",
+      "permissions": {
+        "setting": "open"
+      }
+    }
+  }
+}
