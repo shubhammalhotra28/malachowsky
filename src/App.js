@@ -3,6 +3,10 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Homepage from './components/Homepage';
 import ChowStatus from './components/ChowStatus';
 import ReportLocation from './components/ReportLocation';
+import Amplify from 'aws-amplify';
+import awsconfig from './aws-exports';
+
+Amplify.configure(awsconfig);
 
 function App() {
   return (

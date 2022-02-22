@@ -28,7 +28,7 @@ class ActivityFeed extends React.Component {
 
     render() {
 			return (
-            <div class="activityfeed">
+            <div className="activityfeed">
             <h2>{this.name}</h2>
                 <Table>
                 {this.cards.map((card) => (
