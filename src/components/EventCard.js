@@ -13,7 +13,7 @@ class EventCard extends React.Component {
 
     render() {
 			return (
-			<div class="activitycard">
+			<div className="activitycard">
             <Card className="card" onClick={event =>  window.location.href=this.link}>
                 <CardTitle className="title">{this.title}</CardTitle>
                 <CardBody>

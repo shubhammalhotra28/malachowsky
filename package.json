@@ -4,6 +4,13 @@
   "private": true,
   "dependencies": {
     "@googlemaps/react-wrapper": "^1.1.24",
+<<<<<<< HEAD
+    "@testing-library/jest-dom": "^5.16.2",
+    "@testing-library/react": "^12.1.3",
+    "@testing-library/user-event": "^13.5.0",
+    "aws-amplify": "^4.3.14",
+    "button": "^1.1.1",
+=======
     "@react-google-maps/api": "^2.7.0",
     "@testing-library/jest-dom": "^5.16.1",
     "@testing-library/react": "^12.1.2",
