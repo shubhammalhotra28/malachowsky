@@ -1,0 +1,26 @@
+{
+  "resourceName": "location",
+  "tableName": "location",
+  "partitionKey": {
+    "fieldName": "id",
+    "fieldType": "number"
+  },
+  "sortKey": {
+    "fieldName": "timestamp",
+    "fieldType": "string"
+  },
+  "gsi": [
+    {
+      "name": "photo-id-secondary-index-key",
+      "partitionKey": {
+        "fieldName": "photo_id",
+        "fieldType": "number"
+      },
+      "sortKey": {
+        "fieldName": "timestamp",
+        "fieldType": "string"
+      }
+    }
+  ],
+  "triggerFunctions": []
+}

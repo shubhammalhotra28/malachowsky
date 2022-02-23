@@ -1,0 +1,26 @@
+{
+  "resourceName": "Status",
+  "tableName": "Status",
+  "partitionKey": {
+    "fieldName": "mood",
+    "fieldType": "number"
+  },
+  "sortKey": {
+    "fieldName": "date_time",
+    "fieldType": "string"
+  },
+  "gsi": [
+    {
+      "name": "danger_level_secondary_index",
+      "partitionKey": {
+        "fieldName": "danger_level",
+        "fieldType": "number"
+      },
+      "sortKey": {
+        "fieldName": "date_time",
+        "fieldType": "string"
+      }
+    }
+  ],
+  "triggerFunctions": []
+}
