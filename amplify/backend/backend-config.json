@@ -116,5 +116,23 @@
         }
       ]
     }
+  },
+  "storage": {
+    "Status": {
+      "service": "DynamoDB",
+      "providerPlugin": "awscloudformation"
+    },
+    "classRating": {
+      "service": "DynamoDB",
+      "providerPlugin": "awscloudformation"
+    },
+    "location": {
+      "service": "DynamoDB",
+      "providerPlugin": "awscloudformation"
+    },
+    "chowtograph": {
+      "service": "DynamoDB",
+      "providerPlugin": "awscloudformation"
+    }
   }
 }
