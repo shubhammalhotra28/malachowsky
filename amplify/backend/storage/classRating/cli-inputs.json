@@ -1,0 +1,48 @@
+{
+  "resourceName": "classRating",
+  "tableName": "classRating",
+  "partitionKey": {
+    "fieldName": "id",
+    "fieldType": "number"
+  },
+  "sortKey": {
+    "fieldName": "timestamp",
+    "fieldType": "string"
+  },
+  "gsi": [
+    {
+      "name": "difficulty-secondary-index-key",
+      "partitionKey": {
+        "fieldName": "difficulty",
+        "fieldType": "number"
+      },
+      "sortKey": {
+        "fieldName": "timestamp",
+        "fieldType": "string"
+      }
+    },
+    {
+      "name": "lesson-interest-secondary-index-key",
+      "partitionKey": {
+        "fieldName": "lesson_interest",
+        "fieldType": "number"
+      },
+      "sortKey": {
+        "fieldName": "timestamp",
+        "fieldType": "string"
+      }
+    },
+    {
+      "name": "commedy-level-secondary-index-key",
+      "partitionKey": {
+        "fieldName": "commedy_level",
+        "fieldType": "number"
+      },
+      "sortKey": {
+        "fieldName": "timestamp",
+        "fieldType": "string"
+      }
+    }
+  ],
+  "triggerFunctions": []
+}

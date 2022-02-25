@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "paths": {
+    "/chowlocation": {
+      "name": "/chowlocation",
+      "lambdaFunction": "chowlocation",
+      "permissions": {
+        "setting": "open"
+      }
+    }
+  }
+}
