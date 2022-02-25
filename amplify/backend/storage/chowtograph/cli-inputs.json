@@ -1,0 +1,26 @@
+{
+  "resourceName": "chowtograph",
+  "tableName": "chowtograph",
+  "partitionKey": {
+    "fieldName": "photo_id",
+    "fieldType": "number"
+  },
+  "sortKey": {
+    "fieldName": "timestamp",
+    "fieldType": "string"
+  },
+  "gsi": [
+    {
+      "name": "s3-reference-secondary-index-key",
+      "partitionKey": {
+        "fieldName": "s3_reference",
+        "fieldType": "string"
+      },
+      "sortKey": {
+        "fieldName": "timestamp",
+        "fieldType": "string"
+      }
+    }
+  ],
+  "triggerFunctions": []
+}

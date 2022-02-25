@@ -10,6 +10,34 @@
       "StackName": "amplify-malachowsky-dev-144258",
       "StackId": "arn:aws:cloudformation:us-east-1:088657720649:stack/amplify-malachowsky-dev-144258/ff8e1190-82cd-11ec-aa1b-12d36a6aa1ef",
       "AmplifyAppId": "ddk28nlxp1eue"
+    },
+    "categories": {
+      "function": {
+        "chowphoto": {
+          "deploymentBucketName": "amplify-malachowsky-dev-144258-deployment",
+          "s3Key": "amplify-builds/chowphoto-5a485235427846485049-build.zip"
+        },
+        "chowclasses": {
+          "deploymentBucketName": "amplify-malachowsky-dev-144258-deployment",
+          "s3Key": "amplify-builds/chowclasses-53445357502b4b634b4e-build.zip"
+        },
+        "chowstatus": {
+          "deploymentBucketName": "amplify-malachowsky-dev-144258-deployment",
+          "s3Key": "amplify-builds/chowstatus-7a414461717375375075-build.zip"
+        },
+        "chowmap": {
+          "deploymentBucketName": "amplify-malachowsky-dev-144258-deployment",
+          "s3Key": "amplify-builds/chowmap-6b4a334479456c46704e-build.zip"
+        },
+        "chowlocation": {
+          "deploymentBucketName": "amplify-malachowsky-dev-144258-deployment",
+          "s3Key": "amplify-builds/chowlocation-62563850746b514b6970-build.zip"
+        },
+        "chowdash": {
+          "deploymentBucketName": "amplify-malachowsky-dev-144258-deployment",
+          "s3Key": "amplify-builds/chowdash-4f434e39744833484568-build.zip"
+        }
+      }
     }
   }
 }

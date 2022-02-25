@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "paths": {
+    "/chowclasses": {
+      "name": "/chowclasses",
+      "lambdaFunction": "chowclasses",
+      "permissions": {
+        "setting": "open"
+      }
+    }
+  }
+}
