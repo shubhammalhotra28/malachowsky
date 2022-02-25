@@ -22,7 +22,7 @@
     z-index: 0;
     text-align:center;
 }
-.header {
+.status_header {
     font-weight: bold;
     color: black;
     font-size: 48px;
@@ -37,4 +37,5 @@ label {
     color: black;
     font-size: 32px;
     margin-top: 2%;
+    text-align:center;
 }
