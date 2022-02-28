@@ -5,9 +5,9 @@ import './RatingBar.css'
 export default class RatingBar extends React.Component {
   render() {
     return (
-      <div class="ratingContainer">
+      <div class="rating-container">
         <span>{this.props.title}</span>
-        <Rating />
+        <span class="star-container"><Rating /></span>
       </div>
     );
   }

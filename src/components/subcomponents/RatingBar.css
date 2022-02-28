@@ -1,8 +1,18 @@
-.ratingContainer {
+.rating-container {
   display: flex;
   justify-content: space-between;
+  color: black;
+  background: white;
+  padding: 15px;
+  margin: 10px;
+  border-radius: 4px;
+  box-shadow: 0px 0 12px 0px rgb(122 193 236);
 }
 
-label {
+.star-container {
+  margin-left: 30px;
+}
+
+.star-container label { 
   color: #f1d400;
 }
