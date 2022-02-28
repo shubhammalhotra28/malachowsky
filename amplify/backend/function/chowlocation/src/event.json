@@ -1,1 +1,2 @@
-{ "test": "event" }
+{"httpMethod": "POST", "path": "/chowlocation", "queryStringParameters": {"lat":43.0755308,"lng":-77.6698865}}
+//{"httpMethod": "GET", "path": "/chowlocation", "queryStringParameters": ""}
