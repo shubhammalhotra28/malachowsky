@@ -25,7 +25,7 @@ def getLocations():
         locations = response['Items']
         
         return locations
-    except ClientError as e:
+    except Exception as e:
         print(e.response['Error']['Message'])
 
 def handler(event,context):
