@@ -8,8 +8,6 @@ class Homepage extends React.Component {
     render() {
 			return (
 			<div className="main">
-        <h1 className='topline'>Chow</h1>
-        <h1 className='botline'>Chaser</h1>
         <center>
           <img src={background} alt="tophat_chow" />
         </center>

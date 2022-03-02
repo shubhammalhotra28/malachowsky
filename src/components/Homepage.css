@@ -16,7 +16,7 @@ body{
 
 .topline{
   position: absolute;
-  font-size: 64px;
+  font-size: 36px;
   margin: 0px;
 }
 
@@ -24,7 +24,7 @@ body{
   position: absolute;
   padding: 22px;
   padding-top: 20px;
-  font-size: 64px;
+  font-size: 36px;
 }
 
 .navbuttons Button {
