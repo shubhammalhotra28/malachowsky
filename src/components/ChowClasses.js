@@ -1,6 +1,7 @@
 import React from 'react';
 import './ChowClasses.css'
 import ClassRater from './subcomponents/ClassRater';
+import ClassRating from './subcomponents/ClassRating';
 
 export default class ChowClasses extends React.Component {
   constructor (props) {
@@ -16,8 +17,8 @@ export default class ChowClasses extends React.Component {
 
   renderSingleRating(rating) {
     return (
-      <div>{rating.ratedClass}</div>
-    )
+      <ClassRating rating={rating} />
+    );
   }
 
   renderRatings() {

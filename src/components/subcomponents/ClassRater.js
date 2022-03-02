@@ -9,7 +9,7 @@ export default class ClassRater extends React.Component {
     ratedClass: "NONE",
     comedyRating: 0,
     dificultyRating: 0,
-    interestingRating: 0,
+    interestRating: 0,
     isSubmitting: false,
   };
 
@@ -30,15 +30,15 @@ export default class ClassRater extends React.Component {
     this.setState({dificultyRating: newRating});
   }
   
-  updateInterestingRating = (newRating) => {
-    this.setState({interestingRating: newRating});
+  updateinterestRating = (newRating) => {
+    this.setState({interestRating: newRating});
   }
 
   isFormReadyForSubmission = () => {
     return this.state.ratedClass != "NONE" &&
       this.state.comedyRating > 0 &&
       this.state.dificultyRating > 0 &&
-      this.state.interestingRating > 0;
+      this.state.interestRating > 0;
   }
 
   buildRating = () => {
@@ -46,7 +46,7 @@ export default class ClassRater extends React.Component {
       ratedClass: this.state.ratedClass,
       comedyRating: this.state.comedyRating,
       dificultyRating: this.state.dificultyRating,
-      interestingRating: this.state.interestingRating,
+      interestRating: this.state.interestRating,
     };
   }
 
@@ -61,7 +61,7 @@ export default class ClassRater extends React.Component {
     setTimeout(() => {
       this.setState(ClassRater.startingState);
       this.emitRating(rating);
-    }, 2000);
+    }, 1000);
   }
 
   renderSubmitButton() {
@@ -90,22 +90,22 @@ export default class ClassRater extends React.Component {
             value={this.state.ratedClass}
         />
         <RatingBar
-            title="Class comedy rating"
+            title="🎭 Class comedy rating"
             onChange={this.updateComedyRating}
             disabled={this.state.isSubmitting}
             value={this.state.comedyRating}
         />
         <RatingBar
-            title="Class dificulty rating"
+            title="😣 Class dificulty rating"
             onChange={this.updateDificultyRating}
             disabled={this.state.isSubmitting}
             value={this.state.dificultyRating}
         />
         <RatingBar
-            title="How interesting was this lesson?"
-            onChange={this.updateInterestingRating}
+            title="💡 How interesting was this lesson?"
+            onChange={this.updateinterestRating}
             disabled={this.state.isSubmitting}
-            value={this.state.interestingRating}
+            value={this.state.interestRating}
         />
         {this.renderSubmitButton()}
       </div>
