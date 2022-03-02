@@ -9,6 +9,7 @@ import SentimentDissatisfiedIcon from '@mui/icons-material/SentimentDissatisfied
 import SentimentSatisfiedIcon from '@mui/icons-material/SentimentSatisfied';
 import SentimentSatisfiedAltIcon from '@mui/icons-material/SentimentSatisfiedAltOutlined';
 import SentimentVerySatisfiedIcon from '@mui/icons-material/SentimentVerySatisfied';
+import { API } from 'aws-amplify';
 
 const customIcons = {
   1: {
@@ -41,7 +42,6 @@ function IconContainer(props) {
 IconContainer.propTypes = {
   value: PropTypes.number.isRequired,
 };
-import { API } from 'aws-amplify';
 
 class ChowStatus extends React.Component {
   constructor(props) {
