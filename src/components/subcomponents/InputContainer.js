@@ -6,7 +6,7 @@ export default class InputContainer extends React.Component {
     return (
       <div class="input-container">
         <span>{this.props.title}</span>
-        <span>{this.props.children}</span>
+        <span class="children-container">{this.props.children}</span>
       </div>
     );
   }
