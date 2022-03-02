@@ -33,17 +33,34 @@ export default class ClassRater extends React.Component {
     this.setState({interestingRating: newRating});
   }
 
-  isFormReadyForSubmission() {
+  isFormReadyForSubmission = () => {
     return this.state.ratedClass != "NONE" &&
       this.state.comedyRating > 0 &&
       this.state.dificultyRating > 0 &&
       this.state.interestingRating > 0;
   }
 
+  buildRating = () => {
+    return {
+      ratedClass: this.state.ratedClass,
+      comedyRating: this.state.comedyRating,
+      dificultyRating: this.state.dificultyRating,
+      interestingRating: this.state.interestingRating,
+    };
+  }
+
+  emitRating = (ratingToEmit) => {
+    this.props.onNewRating(ratingToEmit);
+  }
+
   submitRating = () => {
-    console.log(this.state); // TODO: POST to API
+    const rating = this.buildRating();
+    console.log(rating); // TODO: POST to API
     this.setState({isSubmitting: true});
-    setTimeout(() => this.setState(ClassRater.startingState), 2000);
+    setTimeout(() => {
+      this.setState(ClassRater.startingState);
+      this.emitRating(rating);
+    }, 2000);
   }
 
   renderSubmitButton() {
