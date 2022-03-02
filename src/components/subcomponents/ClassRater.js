@@ -2,6 +2,7 @@ import React from 'react';
 import RatingBar from './RatingBar';
 import ClassSelectorBar from './ClassSelectorBar';
 import Button from 'react-bootstrap/Button';
+import './ClassRater.css'
 
 export default class ClassRater extends React.Component {
   static startingState = {

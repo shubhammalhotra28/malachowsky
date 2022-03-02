@@ -1,6 +1,7 @@
 import React from 'react';
 import InputContainer from './InputContainer';
 import Form from 'react-bootstrap/Form';
+import './ClassSelectorBar.css'
 
 export default class ClassSelectorBar extends React.Component {
   render() {
