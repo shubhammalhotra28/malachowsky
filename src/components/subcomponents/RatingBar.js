@@ -1,14 +1,14 @@
 import React from 'react';
 import { Rating } from '@mui/material';
 import './RatingBar.css'
+import InputContainer from './InputContainer';
 
 export default class RatingBar extends React.Component {
   render() {
     return (
-      <div class="rating-container">
-        <span>{this.props.title}</span>
+      <InputContainer title={this.props.title}>
         <span class="star-container"><Rating /></span>
-      </div>
+      </InputContainer>
     );
   }
 }
