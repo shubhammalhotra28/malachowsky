@@ -30,19 +30,19 @@ def getRatings():
         print(e.response['Error']['Message'])
         
 #Submit a new class rating
-@app.route("/SubmitRating", methods=["POST"], content_types=['application/json'])
+@app.route("/SubmitRating", methods=["POST"])
 def submitRatings():
-    request = app.current_request.json_body
+    args = request.args
     try:
         #Set up dynamodb connections
         client = boto3.client('dynamodb')
         resource = boto3.resource('dynamodb')
         table = resource.Table("Class_Rating")
         # Insert into dynamodb
-        lesson_interest = request['lesson_interest']
-        difficulty = request['difficulty']
-        comedy_level = request['comedy_level']
-        date = request['date']
+        lesson_interest = args.get("lesson_interest")
+        difficulty = args.get("difficulty")
+        comedy_level = args.get("comedy_level")
+        date = args.get("date")
         response = table.put_item(
             Item={
                     'lesson_interest': lesson_interest,
