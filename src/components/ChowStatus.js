@@ -9,6 +9,7 @@ import SentimentDissatisfiedIcon from '@mui/icons-material/SentimentDissatisfied
 import SentimentSatisfiedIcon from '@mui/icons-material/SentimentSatisfied';
 import SentimentSatisfiedAltIcon from '@mui/icons-material/SentimentSatisfiedAltOutlined';
 import SentimentVerySatisfiedIcon from '@mui/icons-material/SentimentVerySatisfied';
+import { API } from 'aws-amplify';
 
 const customIcons = {
   1: {
@@ -54,10 +55,39 @@ class ChowStatus extends React.Component {
     alert("The Chow's danger level is: " + this.state.danger + "\r\nThe Chow's danger level is: " + this.state.mood);
   }
 
+
+  async postData() { 
+    const apiName = 'chowstatus';
+    const path = '/chowstatus';
+    const myInit = {
+      body: {},
+      headers: {},
+      queryStringParameters: {
+        "danger": this.state.danger,
+        "mood": this.state.mood
+      }
+    };
+
+    try{
+      return await API.post(apiName, path, myInit);
+    }
+    catch(error){
+      console.log(error);
+    }
+}
+
+callAPI = () => {
+  this.postData();
+
+}
+
+
   handleSubmit(event) {
     alert("The Chow's danger level is: " + this.state.danger + "\r\nThe Chow's mood level is: " + this.state.mood);
     //this.sendLevel(this.state.danger, this.state.mood);
     event.preventDefault();
+    // call the API here
+    this.callAPI();
   }
 
   handleChangeDanger = (event) => {
