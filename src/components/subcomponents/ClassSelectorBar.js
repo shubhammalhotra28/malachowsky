@@ -6,7 +6,7 @@ export default class ClassSelectorBar extends React.Component {
   render() {
     return (
       <InputContainer title={this.props.title}>
-        <Form.Select aria-label="Default select example">
+        <Form.Select aria-label="Default select example" onChange={(event) => this.props.onChange(event.target.value)}>
           <option>select class</option>
           <option value="SWEN 101">SWEN 101</option>
           <option value="SWEN 102">SWEN 102</option>

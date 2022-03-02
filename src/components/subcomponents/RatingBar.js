@@ -7,7 +7,7 @@ export default class RatingBar extends React.Component {
   render() {
     return (
       <InputContainer title={this.props.title}>
-        <span class="star-container"><Rating /></span>
+        <Rating onChange={(event, newValue) => this.props.onChange(newValue)}/>
       </InputContainer>
     );
   }
