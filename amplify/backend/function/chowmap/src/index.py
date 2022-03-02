@@ -22,7 +22,7 @@ def getLocations():
 
     response = table.query(
         IndexName='timestamp-index',
-        KeyConditionExpression=Key('timestamp').between(str(date_), str(datetime.today())))
+        KeyConditionExpression=Key('timestamp').eq(str(datetime.today())))
 
 
     # response = table.query(
