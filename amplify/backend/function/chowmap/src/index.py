@@ -10,31 +10,22 @@ CORS(app)
 
 @app.route("/chowMap",methods=["GET"])
 def getLocations():
-    # try:
-    #Initialize date as one week ago (7 days)
-    date_ = datetime.today() - timedelta(days=7)
-        
-        #Set up dynamodb connections
+    #Set up dynamodb connections
     client = boto3.resource('dynamodb')
     table = client.Table("location-dev")
+    
+    #Initialize date as one week ago (7 days)
+    last_week = datetime.today() - timedelta(days=7).strfttime("%Y-%m-%d")
+    now = datetime.today().strfttime("%Y-%m-%d")
+        
+    fe = Key('timestamp').between(last_week, now)
         
     #Query for reported locations from past 7 days
-
-    response = table.query(
+    response = table.scan(
         IndexName='timestamp-index',
-        KeyConditionExpression=Key('timestamp').eq(str(datetime.today())))
+        FilterExpression = fe
+        #KeyConditionExpression=Key('timestamp').eq(str(datetime.today())))
 
-
-    # response = table.query(
-    #     KeyConditionExpression = Key('timestamp').between(str(date_), str(datetime.today()))
-    # # )
-    # print("response = ",response['Items'])
-    # locations = response['Items']
-        
-    # return locations
-    # except Exception as e:
-        # print(e)
-        # print(e.response['Error']['Message'])
     return response
 
 def handler(event,context):
