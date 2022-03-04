@@ -8,9 +8,9 @@ verify_ssl = true
 [packages]
 src = {editable = true, path = "./src"}
 aws-wsgi = "*"
+boto3 = "*"
 flask = "*"
 flask-cors = "*"
-boto3 = "*"
 datetime = "*"
 
 [requires]
