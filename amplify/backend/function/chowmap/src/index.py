@@ -25,6 +25,7 @@ def getLocations():
         IndexName='timestamp-index',
         FilterExpression = fe
         #KeyConditionExpression=Key('timestamp').eq(str(datetime.today())))
+    )
 
     return response
 
