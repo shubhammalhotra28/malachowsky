@@ -2,10 +2,24 @@ import React from 'react';
 import './ChowMap.css';
 import { Wrapper } from "@googlemaps/react-wrapper";
 
-const markers = [
-  { lat: 43.08400302747437, lng: -77.6800637907594},
-  { lat: 43.08317908060919, lng: -77.680805067302 }
-];
+const apiName = "chowmap-dev"
+const path = "/chowMap";
+const markers = [];
+API
+  .get(apiName, path)
+  .then(response => {
+    markers = response.items();
+    console.log(markers)
+  })
+  .catch(error => {
+    console.log(error.response);
+ });
+
+
+//const markers = [
+//  { lat: 43.08400302747437, lng: -77.6800637907594},
+//  { lat: 43.08317908060919, lng: -77.680805067302 }
+//];
 
 const Map = ({ onClick, onIdle, children, style, ...options }) => {
   const ref = React.useRef(null);
