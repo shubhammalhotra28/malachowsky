@@ -23,7 +23,7 @@ export default class ChowClasses extends React.Component {
 
   renderRatings() {
     return (
-      <div>{this.state.recentRatings.map((rating) => this.renderSingleRating(rating))}</div>
+      <div className="ratings-list">{this.state.recentRatings.map((rating) => this.renderSingleRating(rating))}</div>
     );
   }
 
@@ -31,8 +31,12 @@ export default class ChowClasses extends React.Component {
     return (
       <div className="classes-top">
         <h1>Rate My Chow</h1>
-        <ClassRater onNewRating={this.addNewRating} />
-        {this.renderRatings()}
+        <div className="inner-container">
+          <h3>Submit a New Rating:</h3>
+          <ClassRater onNewRating={this.addNewRating} />
+          <h3>Recent Ratings:</h3>
+          {this.renderRatings()}
+        </div>
       </div>
     );
   }

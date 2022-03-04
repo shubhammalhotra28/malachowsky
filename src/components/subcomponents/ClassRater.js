@@ -82,7 +82,7 @@ export default class ClassRater extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className="class-rater-top">
         <ClassSelectorBar
             title="Which class are you rating?"
             onChange={this.updateClassToRate}
