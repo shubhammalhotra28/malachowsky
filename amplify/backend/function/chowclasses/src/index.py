@@ -2,7 +2,7 @@ import awsgi
 from flask_cors import CORS
 from flask import Flask, jsonify, request
 import boto3
-from datetime import date
+from datetime import date, timedelta
 
 app = Flask(__name__)
 CORS(app)
@@ -12,22 +12,23 @@ CORS(app)
 def getRatings():
     try:
         #Initialize date as one week ago (7 days)
-        date = date.today() - date.timedelta(days=7)
+        currDate = date.today() - timedelta(days=7)
         
         #Set up dynamodb connections
-        client = boto3.client('dynamodb')
-        resource = boto3.resource('dynamodb')
-        table = resource.Table("Class_Rating")
+        resource = boto3.resource('dynamodb',region_name='us-east-1')
+        table = resource.Table("classRating")
         
         #Query for reported locations from past 7 days
         response = table.query(
-            KeyConditionExpression = Key('date').between(date, date.today())
+            KeyConditionExpression = boto3.dynamodb.conditions.Key('timestamp').between(str(currDate), str(date.today()))
         )
         ratings = response['Items']
         
         return ratings
     except Exception as e:
+        print(e)
         print(e.response['Error']['Message'])
+        return e
         
 #Submit a new class rating
 @app.route("/SubmitRating", methods=["POST"])
@@ -35,8 +36,7 @@ def submitRatings():
     args = request.args
     try:
         #Set up dynamodb connections
-        client = boto3.client('dynamodb')
-        resource = boto3.resource('dynamodb')
+        resource = boto3.resource('dynamodb',region_name='us-east-1')
         table = resource.Table("Class_Rating")
         # Insert into dynamodb
         lesson_interest = args.get("lesson_interest")
