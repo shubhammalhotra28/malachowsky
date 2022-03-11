@@ -1,1 +1,1 @@
-{"httpMethod": "POST", "path": "/chowstatus", "queryStringParameters": {"danger" : "4","mood":"4"}}
+{"httpMethod": "GET", "path": "/chowstatus", "queryStringParameters": ""}

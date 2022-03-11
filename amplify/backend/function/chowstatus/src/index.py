@@ -16,7 +16,28 @@ CORS(app)
 # TODO: get the status of the message
 @app.route(BASE_ROUTE,methods=["GET"])
 def getStatus():
-    return "hello world"
+    
+    client = boto3.resource('dynamodb')
+    table = client.Table("Status-dev")
+    print(table.table_status)
+    response = table.scan()
+
+    return response
+
+
+
+    # dbTable = dynamo.Table(tableName)
+    # response = dbTable.scan()
+    # # if kwargs.get('Select')=="COUNT":
+    # #     return response.get('Count')
+    # data = response.get('Items')
+    # while 'LastEvaluatedKey' in response:
+    #     response = kwargs.get('table').scan(ExclusiveStartKey=response['LastEvaluatedKey'])
+    #     data.extend(response['Items'])
+    # return data
+    
+    
+    # return "hello world"
 
 # Method responsible for the post request
 @app.route(BASE_ROUTE,methods=["POST"])
