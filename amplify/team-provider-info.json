@@ -15,27 +15,27 @@
       "function": {
         "chowphoto": {
           "deploymentBucketName": "amplify-malachowsky-dev-144258-deployment",
-          "s3Key": "amplify-builds/chowphoto-5a485235427846485049-build.zip"
+          "s3Key": "amplify-builds/chowphoto-6f376d746e46785a6a4f-build.zip"
         },
         "chowclasses": {
           "deploymentBucketName": "amplify-malachowsky-dev-144258-deployment",
-          "s3Key": "amplify-builds/chowclasses-53445357502b4b634b4e-build.zip"
+          "s3Key": "amplify-builds/chowclasses-76347747626253793777-build.zip"
         },
         "chowstatus": {
           "deploymentBucketName": "amplify-malachowsky-dev-144258-deployment",
-          "s3Key": "amplify-builds/chowstatus-564a437962612f4f3555-build.zip"
+          "s3Key": "amplify-builds/chowstatus-35334f543430556f5662-build.zip"
         },
         "chowmap": {
           "deploymentBucketName": "amplify-malachowsky-dev-144258-deployment",
-          "s3Key": "amplify-builds/chowmap-6b4a334479456c46704e-build.zip"
+          "s3Key": "amplify-builds/chowmap-6c4e374b693658767556-build.zip"
         },
         "chowlocation": {
           "deploymentBucketName": "amplify-malachowsky-dev-144258-deployment",
-          "s3Key": "amplify-builds/chowlocation-6d34514f4f425a6d314d-build.zip"
+          "s3Key": "amplify-builds/chowlocation-744b4c5149456d6b4150-build.zip"
         },
         "chowdash": {
           "deploymentBucketName": "amplify-malachowsky-dev-144258-deployment",
-          "s3Key": "amplify-builds/chowdash-4f434e39744833484568-build.zip"
+          "s3Key": "amplify-builds/chowdash-4b6f4a6e317a72546756-build.zip"
         }
       }
     }
