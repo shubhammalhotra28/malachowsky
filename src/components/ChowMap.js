@@ -7,6 +7,7 @@ const markers = [
   { lat: 43.08317908060919, lng: -77.680805067302 }
 ];
 
+//API
 const Map = ({ onClick, onIdle, children, style, ...options }) => {
   const ref = React.useRef(null);
   const [map, setMap] = React.useState();
