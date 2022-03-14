@@ -13,10 +13,13 @@
   }
 }
 
+.topline{
+  padding-top: 1.25%;
+  padding-left: 1.5%;
+}
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
-  display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;

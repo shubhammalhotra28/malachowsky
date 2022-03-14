@@ -7,8 +7,7 @@ import ReportLocation from './components/ReportLocation';
 import ChowMap from './components/ChowMap';
 import Amplify from 'aws-amplify';
 import awsconfig from './aws-exports';
-// import 'bootstrap/dist/css/bootstrap.min.css'; // TODO: Remove
-
+import Navbar from './components/Navbar';
 
 Amplify.configure(awsconfig);
 
@@ -17,15 +16,15 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
+        <h1 className='topline'>Chow Chaser</h1>
         <BrowserRouter>
+          <Navbar />
           <Routes>
-            <Route path="/">
               <Route index element={<Homepage />} />
               <Route path="chowstatus" element={<ChowStatus />} />
               <Route path="chowclasses" element={<ChowClasses />} />
               <Route path="chowlocation" element={<ReportLocation />} />
               <Route path="chowmap" element={<ChowMap />} />
-            </Route>
           </Routes>
         </BrowserRouter>
       </header>

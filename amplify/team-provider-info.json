@@ -23,7 +23,7 @@
         },
         "chowstatus": {
           "deploymentBucketName": "amplify-malachowsky-dev-144258-deployment",
-          "s3Key": "amplify-builds/chowstatus-7a414461717375375075-build.zip"
+          "s3Key": "amplify-builds/chowstatus-564a437962612f4f3555-build.zip"
         },
         "chowmap": {
           "deploymentBucketName": "amplify-malachowsky-dev-144258-deployment",
@@ -31,7 +31,7 @@
         },
         "chowlocation": {
           "deploymentBucketName": "amplify-malachowsky-dev-144258-deployment",
-          "s3Key": "amplify-builds/chowlocation-62563850746b514b6970-build.zip"
+          "s3Key": "amplify-builds/chowlocation-6d34514f4f425a6d314d-build.zip"
         },
         "chowdash": {
           "deploymentBucketName": "amplify-malachowsky-dev-144258-deployment",
