@@ -2,6 +2,7 @@ import './App.css';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Homepage from './components/Homepage';
 import ChowStatus from './components/ChowStatus';
+import ChowClasses from './components/ChowClasses';
 import ReportLocation from './components/ReportLocation';
 import ChowMap from './components/ChowMap';
 import Amplify from 'aws-amplify';
@@ -21,6 +22,7 @@ function App() {
           <Routes>
               <Route index element={<Homepage />} />
               <Route path="chowstatus" element={<ChowStatus />} />
+              <Route path="chowclasses" element={<ChowClasses />} />
               <Route path="chowlocation" element={<ReportLocation />} />
               <Route path="chowmap" element={<ChowMap />} />
           </Routes>
