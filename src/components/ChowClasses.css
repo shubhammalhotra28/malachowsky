@@ -1,0 +1,26 @@
+.classes-top {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow-y: scroll;
+}
+
+.inner-container {
+  width: fit-content;
+  height: 500px;
+}
+
+.ratings-list {
+  padding-bottom: 100px;
+}
+
+h3 {
+  margin: 0;
+  text-align: start;
+}
+
+::-webkit-scrollbar {
+  width: 0;  /* Remove scrollbar space */
+  background: transparent;  /* Optional: just make scrollbar invisible */
+}

@@ -1,0 +1,21 @@
+.class-rating-container {
+  display: flex;
+  justify-content: space-between;
+  color: black;
+  background: white;
+  padding: 15px;
+  margin: 10px;
+  border-radius: 4px;
+  box-shadow: 0px 0 12px 0px rgb(122 193 236);
+  font-size: smaller;
+}
+
+.emoji {
+  padding-right: 6px;
+}
+
+.individual-rating {
+  padding-left: 20px;
+  display: flex;
+  align-items: center;
+}

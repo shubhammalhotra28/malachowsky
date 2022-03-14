@@ -41,26 +41,6 @@ body{
   border-radius: 10%;
 }
 
-.leftcol Button{
-  left: 25%;
-}
-
-.rightcol Button{
-  left: 75%;
-}
-
-.row1 Button{
-  top: 15%;
-}
-
-.row2 Button{
-  top: 45%;
-}
-
-.row3 Button{
-  top: 75%;
-}
-
 .main .btn:hover {
   color: rgb(200, 227, 241);
   background-color: rgb(26, 31, 88);
