@@ -1,6 +1,4 @@
 import React from 'react';
-import { Button} from 'react-bootstrap';
-import styled from 'styled-components';
 import './ChowStatus.css'
 import PropTypes from 'prop-types';
 import Rating from '@mui/material/Rating';
@@ -51,6 +49,7 @@ class ChowStatus extends React.Component {
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
+
   sendLevel(danger, mood){
     alert("The Chow's danger level is: " + this.state.danger + "\r\nThe Chow's danger level is: " + this.state.mood);
   }
@@ -78,7 +77,6 @@ class ChowStatus extends React.Component {
 
 callAPI = () => {
   this.postData();
-
 }
 
 
